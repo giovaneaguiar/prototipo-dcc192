@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <display-name>Semana 3 - Prático</display-name>
+    <context-param>
+        <param-name>msg</param-name>
+        <param-value>Erro!</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>fazerLogin</servlet-name>
+        <servlet-class>fazerLogin</servlet-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>giovane</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>aguiar</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>matar</servlet-name>
+        <servlet-class>matar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>conexaoComBanco</servlet-name>
+        <servlet-class>conexaoComBanco</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>menu</servlet-name>
+        <servlet-class>menu</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fazerLogin</servlet-name>
+        <url-pattern>/aplicacao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>conexaoComBanco</servlet-name>
+        <url-pattern>/conexaoComBanco</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>menu</servlet-name>
+        <url-pattern>/menu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>matar</servlet-name>
+        <url-pattern>/matar</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
